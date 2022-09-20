@@ -32,3 +32,20 @@ texto_2 = '7'
 # Esta pregunta estará repetida en el Campus para que puedan
 # responder.
 # NOTA: La respuesta no se encuentra en el apunte, sino en Google ;)
+
+if texto_1 > texto_2:
+    print(texto_1, 'es mayor')
+elif texto_2 > texto_1:
+    print (texto_2, 'es mayor')
+else:
+    print('son iguales')
+
+numero_1 = int(texto_1)
+numero_2 = int(texto_2)
+
+if numero_1 > numero_2:
+    print('el mayor es',numero_1)
+elif numero_2 > numero_1:
+    print('el mayor es',numero_2)
+else:
+    print('son iguales')

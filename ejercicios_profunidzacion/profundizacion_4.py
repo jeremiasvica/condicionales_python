@@ -33,3 +33,46 @@ contenido.
 
 print('Ejercicios de práctica con cadenas')
 # Empezar aquí la resolución del ejercicio
+palabra_1 = str(input('ingrese palabra: '))
+palabra_2 = str(input('ingrese palabra: '))
+palabra_3 = str(input('ingrese palabra: '))
+print('elegir 1 para orden alfabetico')
+print('elegir 2 para orden x cantidad de letras')
+eleccion = int(input())
+
+if eleccion == 1:
+    if (palabra_1 > palabra_2) and (palabra_1 > palabra_3) and (palabra_2 > palabra_3):
+        print('el orden es:', palabra_1, palabra_2, palabra_3)
+    elif (palabra_1 > palabra_2) and (palabra_1 > palabra_3) and (palabra_3 > palabra_2):
+        print('el orden es:', palabra_1, palabra_3, palabra_2)
+    elif (palabra_2 > palabra_1) and (palabra_2 > palabra_3) and (palabra_1 > palabra_3):
+        print('el orden es:', palabra_2, palabra_1, palabra_3)
+    elif (palabra_2 > palabra_1) and (palabra_2 > palabra_3) and (palabra_3 > palabra_1):
+        print('el orden es:', palabra_2, palabra_3, palabra_1)
+    elif (palabra_3 > palabra_1) and (palabra_3 > palabra_2) and (palabra_1 > palabra_2):
+        print('el orden es:', palabra_3, palabra_1, palabra_2)
+    elif (palabra_3 > palabra_1) and (palabra_3 > palabra_2) and (palabra_2 > palabra_1):
+        print('el orden es:', palabra_3, palabra_2, palabra_1)
+    else:
+        print('hay palabras ingresadas iguales')
+
+if eleccion == 2:
+    if len(palabra_1) >= len(palabra_2) and len(palabra_1) >= len(palabra_3) and len(palabra_2) <= len(palabra_1) and len(palabra_2) >= len(palabra_3):
+       print('el Orden es:',palabra_1,palabra_2,palabra_3)
+
+    elif len(palabra_1) >= len(palabra_2) and len(palabra_1) >= len(palabra_3) and len(palabra_3) <= len(palabra_1) and len(palabra_3) >= len(palabra_2):
+       print('el Orden es:',palabra_1,palabra_3,palabra_2)
+
+    elif len(palabra_2) >= len(palabra_1) and len(palabra_2) >= len(palabra_3) and len(palabra_1) <= len(palabra_2) and len(palabra_1) >= len(palabra_3):
+       print('el Orden es:',palabra_2,palabra_1,palabra_3)
+
+    elif len(palabra_2) >= len(palabra_1) and len(palabra_2) >= len(palabra_3) and len(palabra_3) <= len(palabra_2) and len(palabra_3) >= len(palabra_1):
+       print('el Orden es:',palabra_2,palabra_3,palabra_1)
+
+    elif len(palabra_3) >= len(palabra_2) and len(palabra_3) >= len(palabra_1) and len(palabra_2) <= len(palabra_3) and len(palabra_2) >= len(palabra_1):
+       print('el Orden es:',palabra_3,palabra_2,palabra_1)
+
+    elif len(palabra_3) >= len(palabra_2) and len(palabra_3) >= len(palabra_1) and len(palabra_1) <= len(palabra_3) and len(palabra_1) >= len(palabra_2):
+       print('el Orden es:',palabra_3,palabra_1,palabra_2)
+    else:
+        print('hay longitudes iguales')
